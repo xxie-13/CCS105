@@ -1,14 +1,11 @@
-//declaration
-const express=require('express') //API HTTP methods (CRUD) post, get , put, delete
-const app=express()
+const express = require('express');
+const path = require('path');
 
-//endpoints API
-app.get('/metric-converter',(req,res)=>{
-    res.send(" ")
-})
+const app = express();
+const port = process.env.PORT || 5552;
 
-//port
-app.listen(5552,()=>{
-    console.log(`Server is running in port 5552`)
-})
+app.use(express.static(path.join(__dirname, 'public')));
 
+app.listen(port, () => {
+	console.log(`Server is running on port ${port}`);
+});
