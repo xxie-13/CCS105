@@ -1,0 +1,18 @@
+node:_http_outgoing:645
+    throw new ERR_HTTP_HEADERS_SENT('set');
+    ^
+
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:399:5)
+    at ServerResponse.setHeader (node:_http_outgoing:645:11)
+    at ServerResponse.header (D:\BAUTISTA\CCS105\crud\node_modules\express\lib\response.js:686:10)
+    at ServerResponse.contentType (D:\BAUTISTA\CCS105\crud\node_modules\express\lib\response.js:516:15)
+    at ServerResponse.send (D:\BAUTISTA\CCS105\crud\node_modules\express\lib\response.js:138:14)
+    at Query.onResult (D:\BAUTISTA\CCS105\crud\controllers\userController.js:10:13)
+    at D:\BAUTISTA\CCS105\crud\node_modules\mysql2\lib\commands\query.js:100:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+  code: 'ERR_HTTP_HEADERS_SENT'
+}
+
+Node.js v18.16.0
+[nodemon] app crashed - waiting for file changes before starting...
